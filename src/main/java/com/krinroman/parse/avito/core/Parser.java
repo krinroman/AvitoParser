@@ -15,6 +15,7 @@ public class Parser {
         System.out.println("Началась загрузка индексов");
         System.out.println("Загрузка...");
         Document doc = MyConnection.getDocument("https://www.avito.ru/kirovskaya_oblast_kirov/kvartiry/sdam/na_dlitelnyy_srok?p=1");
+        System.out.println(doc);
         int count = getCountPage(doc);
         List<IndexAvitoObject> indexAvitoObjectList = new ArrayList<>();
         indexAvitoObjectList.addAll(ParsingPage(doc));
